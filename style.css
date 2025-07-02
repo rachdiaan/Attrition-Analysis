@@ -1,0 +1,100 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(226, 232, 240, 1);
+}
+.card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.08);
+}
+pre code.hljs{
+    border-radius: 0.5rem;
+    background: #1e293b;
+}
+#back-to-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 40;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(150%);
+}
+#back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Floating Bottom Nav */
+#bottom-nav {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    border-radius: 9999px;
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.bottom-nav-link {
+    padding: 0.75rem;
+    border-radius: 50%;
+    color: #475569;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.bottom-nav-link:hover {
+    background: #f1f5f9;
+    transform: translateY(-5px);
+    color: #0f172a;
+}
+.bottom-nav-link.active {
+    background: #fff;
+    color: #0f172a;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.bottom-nav-link .tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e293b;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+.bottom-nav-link:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}

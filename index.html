@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gitbook: Analisis Atrisi Karyawan - Studi Kasus PT Kreativa Solusi</title>
+    
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Highlight.js for Code Blocks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <div class="relative min-h-screen">
+        <!-- Main Content -->
+        <main id="main-content" class="w-full transition-all duration-300 ease-in-out">
+            <div class="max-w-4xl mx-auto p-6 md:p-12">
+
+                <!-- Section: Introduction -->
+                <section id="introduction" class="mb-16 fade-in">
+                    <div class="mb-8">
+                        <span class="text-sm font-semibold text-sky-600 bg-sky-100 py-1 px-3 rounded-full">Manajemen SDM</span>
+                        <span class="text-sm text-slate-500">by Rachdian</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">Analisis Atrisi Karyawan</h1>
+                    <p class="text-lg text-slate-600 mb-6">Memahami faktor-faktor penyebab tingginya tingkat atrisi karyawan di PT Kreativa Solusi dan merancang strategi retensi berbasis data untuk meningkatkan produktivitas dan stabilitas perusahaan.</p>
+                    
+                    <div class="card p-6">
+                        <h3 class="font-bold text-slate-800 mb-3 text-lg flex items-center gap-2"><i data-lucide="users-round" class="w-5 h-5 text-sky-500"></i>Apa itu Analisis Atrisi?</h3>
+                        <p class="text-slate-600 mb-4">Analisis atrisi adalah proses untuk memahami tingkat dan penyebab kehilangan karyawan dalam periode tertentu. Tujuannya adalah untuk mengidentifikasi pola dan faktor risiko guna menyusun strategi retensi yang efektif.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 bg-slate-50 rounded-lg border">
+                                <h4 class="font-semibold text-slate-800 flex items-center gap-2 mb-1"><i data-lucide="trending-down" class="w-4 h-4 text-red-500"></i>Identifikasi Masalah</h4>
+                                <p class="text-sm text-slate-600">Menemukan divisi atau kelompok karyawan dengan tingkat atrisi tertinggi.</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border">
+                                <h4 class="font-semibold text-slate-800 flex items-center gap-2 mb-1"><i data-lucide="search" class="w-4 h-4 text-blue-500"></i>Analisis Penyebab</h4>
+                                <p class="text-sm text-slate-600">Menganalisis faktor-faktor seperti gaji, beban kerja, dan kepuasan kerja.</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border">
+                                <h4 class="font-semibold text-slate-800 flex items-center gap-2 mb-1"><i data-lucide="target" class="w-4 h-4 text-green-500"></i>Strategi Retensi</h4>
+                                <p class="text-sm text-slate-600">Merancang program untuk meningkatkan loyalitas dan mengurangi turnover.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Case Study -->
+                <section id="case-study" class="mb-16 fade-in">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-sky-500 pl-4">Studi Kasus: PT Kreativa Solusi</h2>
+                    <div class="card p-6">
+                        <h3 class="font-bold text-slate-800 mb-3 text-lg flex items-center gap-2"><i data-lucide="building-2" class="w-5 h-5 text-indigo-500"></i>Latar Belakang Perusahaan</h3>
+                        <p class="text-slate-600 mb-4">PT Kreativa Solusi, sebuah perusahaan teknologi SaaS, menghadapi tingkat atrisi tahunan sebesar **18%**, jauh di atas rata-rata industri (12%). Hal ini berdampak pada:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="dollar-sign" class="w-5 h-5 text-red-500 mt-1 flex-shrink-0"></i>
+                                <div class="text-slate-600"><strong class="text-slate-700">Peningkatan Biaya:</strong> Biaya rekrutmen dan pelatihan yang terus-menerus.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="activity" class="w-5 h-5 text-amber-500 mt-1 flex-shrink-0"></i>
+                                <div class="text-slate-600"><strong class="text-slate-700">Penurunan Produktivitas:</strong> Proyek melambat karena kehilangan talenta kunci.</div>
+                            </li>
+                             <li class="flex items-start gap-3">
+                                <i data-lucide="frown" class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0"></i>
+                                <div class="text-slate-600"><strong class="text-slate-700">Moral Rendah:</strong> Karyawan yang tersisa merasa terbebani dan kurang termotivasi.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section: Data Findings -->
+                <section id="findings" class="mb-16 fade-in">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-sky-500 pl-4">Temuan Data: Analisis Atrisi</h2>
+                    
+                    <div class="card p-6 mb-6">
+                        <h3 class="font-bold text-slate-800 mb-4 text-lg">Tingkat Atrisi per Divisi</h3>
+                        <p class="text-slate-600 mb-4">Analisis awal menunjukkan bahwa beberapa divisi memiliki tingkat atrisi yang lebih tinggi dibandingkan yang lain. Divisi **Customer Service** menjadi yang tertinggi, menandakan adanya masalah spesifik di area ini.</p>
+                        <div class="h-80 md:h-96"><canvas id="attritionByDivisionChart"></canvas></div>
+                    </div>
+
+                    <div class="card p-6">
+                        <h3 class="font-bold text-slate-800 mb-4 text-lg">Penyebab Utama Karyawan Keluar</h3>
+                        <p class="text-slate-600 mb-4">Secara keseluruhan, **Beban Kerja (Workload)** menjadi alasan utama karyawan meninggalkan perusahaan, diikuti oleh **Gaji Rendah** dan **Manajemen yang Buruk**.</p>
+                        <div class="h-80 md:h-96"><canvas id="reasonsChart"></canvas></div>
+                    </div>
+                </section>
+
+                <!-- Section: Real Business Case -->
+                <section id="real-case" class="mb-16 fade-in">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-sky-500 pl-4">Real Business Case: Analisis Kode</h2>
+                    <div class="space-y-6">
+                        <div class="card p-6">
+                            <h3 class="font-bold text-slate-800 mb-2 text-lg">Analisis Atrisi dengan Python</h3>
+                            <p class="text-slate-600 mb-4">Kode berikut digunakan untuk menghitung dan memvisualisasikan tingkat atrisi di setiap divisi untuk mengidentifikasi area masalah utama.</p>
+                            <pre><code id="code-block" class="language-python hljs">import pandas as pd
+import matplotlib.pyplot as plt
+
+# Muat dataset
+file_path = "PTKreativaSolusi.csv"
+dataset = pd.read_csv(file_path)
+
+# Filter data karyawan yang mengalami atrisi
+attrition_data = dataset[dataset['Attrition'] == 'Yes']
+
+# Hitung tingkat atrisi untuk setiap divisi
+division_attrition_rate = (attrition_data['Division'].value_counts() / 
+                           dataset['Division'].value_counts() * 100)
+
+# Urutkan data untuk visualisasi
+division_attrition_rate_sorted = division_attrition_rate.sort_values(ascending=False)
+
+# Visualisasi data
+plt.figure(figsize=(10, 6))
+bars = plt.bar(
+    division_attrition_rate_sorted.index,
+    division_attrition_rate_sorted.values
+)
+plt.title("Tingkat Atrisi per Divisi")
+plt.ylabel("Tingkat Atrisi (%)")
+plt.show()
+</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Business Implications -->
+                <section id="implications" class="mb-16 fade-in">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-sky-500 pl-4">Implikasi Bisnis</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="card p-6">
+                            <i data-lucide="line-chart" class="w-10 h-10 text-sky-500 mb-4"></i>
+                            <h3 class="font-bold text-slate-800 mb-2 text-lg">Strategis</h3>
+                            <p class="text-slate-600 text-sm">Tingkat atrisi yang tinggi dapat merusak reputasi perusahaan di pasar kerja dan menurunkan daya saing dalam inovasi produk.</p>
+                        </div>
+                        <div class="card p-6">
+                            <i data-lucide="settings-2" class="w-10 h-10 text-sky-500 mb-4"></i>
+                            <h3 class="font-bold text-slate-800 mb-2 text-lg">Operasional</h3>
+                            <p class="text-slate-600 text-sm">Kehilangan karyawan kunci memperlambat proyek, meningkatkan beban kerja tim yang ada, dan mengurangi efisiensi proses.</p>
+                        </div>
+                        <div class="card p-6">
+                            <i data-lucide="dollar-sign" class="w-10 h-10 text-sky-500 mb-4"></i>
+                            <h3 class="font-bold text-slate-800 mb-2 text-lg">Finansial</h3>
+                            <p class="text-slate-600 text-sm">Biaya operasional meningkat karena rekrutmen dan pelatihan terus-menerus. Penurunan produktivitas juga berdampak negatif pada profitabilitas.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Recommendations -->
+                <section id="recommendations" class="mb-16 fade-in">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-sky-500 pl-4">Rekomendasi Aksi</h2>
+                    <div class="space-y-6">
+                        <div class="card p-6">
+                             <h3 class="font-bold text-slate-800 mb-4 text-lg">Strategi Retensi Berbasis Data</h3>
+                             <p class="text-slate-600 mb-4">Berdasarkan temuan, rekomendasi difokuskan pada tiga area utama untuk mengurangi atrisi secara efektif.</p>
+                             <div class="space-y-4">
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-blue-100 p-3 rounded-full border"><i data-lucide="user-cog" class="w-6 h-6 text-blue-600"></i></div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800">Manajemen Beban Kerja</h4>
+                                        <p class="text-sm text-slate-600 mt-1">Lakukan redistribusi tugas dan implementasikan alat otomatisasi untuk mengurangi tekanan pada divisi dengan skor beban kerja tinggi seperti Customer Service.</p>
+                                    </div>
+                                </div>
+                                 <div class="flex items-start gap-4">
+                                    <div class="bg-green-100 p-3 rounded-full border"><i data-lucide="award" class="w-6 h-6 text-green-600"></i></div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800">Pengelolaan Karyawan</h4>
+                                        <p class="text-sm text-slate-600 mt-1">Sesuaikan kompensasi dengan standar industri dan berikan pelatihan kepemimpinan untuk manajer guna mencegah manajemen yang buruk.</p>
+                                    </div>
+                                </div>
+                                 <div class="flex items-start gap-4">
+                                    <div class="bg-yellow-100 p-3 rounded-full border"><i data-lucide="smile" class="w-6 h-6 text-yellow-600"></i></div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800">Lingkungan Kerja</h4>
+                                        <p class="text-sm text-slate-600 mt-1">Tingkatkan moral melalui program penghargaan, aktivitas *team building*, dan ciptakan jalur karier yang jelas untuk meningkatkan motivasi.</p>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Footer -->
+                <footer class="text-center mt-20 pt-8 border-t border-slate-200">
+                    <p class="text-sm text-slate-500">© 2025. Created with ❤️ by Rachdian</p>
+                </footer>
+
+            </div>
+        </main>
+    </div>
+    
+    <!-- Floating Bottom Nav -->
+    <nav id="bottom-nav" class="glass">
+        <a href="#introduction" class="bottom-nav-link group">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+            <span class="tooltip">Pendahuluan</span>
+        </a>
+        <a href="#case-study" class="bottom-nav-link group">
+            <i data-lucide="target" class="w-5 h-5"></i>
+            <span class="tooltip">Studi Kasus</span>
+        </a>
+        <a href="#findings" class="bottom-nav-link group">
+            <i data-lucide="pie-chart" class="w-5 h-5"></i>
+            <span class="tooltip">Temuan</span>
+        </a>
+        <a href="#real-case" class="bottom-nav-link group">
+            <i data-lucide="file-code" class="w-5 h-5"></i>
+            <span class="tooltip">Analisis Kode</span>
+        </a>
+        <a href="#implications" class="bottom-nav-link group">
+            <i data-lucide="briefcase" class="w-5 h-5"></i>
+            <span class="tooltip">Implikasi</span>
+        </a>
+        <a href="#recommendations" class="bottom-nav-link group">
+            <i data-lucide="check-circle" class="w-5 h-5"></i>
+            <span class="tooltip">Rekomendasi</span>
+        </a>
+    </nav>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="p-3 rounded-full glass shadow-lg hover:scale-110 transition-transform">
+        <i data-lucide="arrow-up" class="w-6 h-6 text-slate-800"></i>
+    </button>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
